@@ -8,27 +8,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
-@Document(collection = "products")
 
+@Document(collection = "products")
 @Data
-@ NoArgsConstructor
+@NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Product {
     @Id
     private long id;
 
     private String name;
     private String description;
-    private BigDecimal price;
-
-    public Product(long id, String name, String description, BigDecimal price) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
 
     public long getId() {
         return id;
@@ -61,4 +52,10 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
+
+    private BigDecimal price;
+
+    // Remove manual constructors and getter/setters
+    // Lombok @Data provides getters/setters
+    // @NoArgsConstructor and @AllArgsConstructor provide constructors
 }

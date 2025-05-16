@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 
 @Data
@@ -12,7 +15,12 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 public class ProductDto {
+
+    // Name must not be null or blank
+    @NotBlank(message = "Product name must not be blank")
     private String name;
+
+    private String description;
 
     public String getName() {
         return name;
@@ -38,6 +46,8 @@ public class ProductDto {
         this.price = price;
     }
 
-    private String description;
+    // Price must be a positive value
+    @NotNull(message = "Price must not be null")
+    @Positive(message = "Price must be greater than 0")
     private BigDecimal price;
 }
