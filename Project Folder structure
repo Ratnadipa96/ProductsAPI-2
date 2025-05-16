@@ -1,0 +1,21 @@
+ProductsAPI/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── Edstruments/example/ProductsAPI/
+│   │   │       ├── controller/
+│   │   │       │    └── ProductController.java
+│   │   │       ├── dto/
+│   │   │       │    └── ProductDto.java
+│   │   │       ├── model/
+│   │   │       │    └── Product.java
+│   │   │       ├── repository/
+│   │   │       │    └── ProductRepository.java
+│   │   │       ├── service/
+│   │   │       │    ├── ProductService.java
+│   │   │       │    └── ProductServiceImpl.java
+│   │   │       └── ProductsApiApplication.java
+│   │   └── resources/
+│   │        ├── application.properties
+│   │        └── data.sql (optional)
+├── pom.xml
