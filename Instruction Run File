@@ -1,0 +1,7 @@
+// Commands used
+
+mvn clean install
+mvn spring-boot:run
+// The app runs on default port 9090.
+
+ Console available at: http://localhost:9090/ 
